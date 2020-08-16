@@ -1,0 +1,106 @@
+:root {
+	--primary: 0, 0%, 100%;
+	--secondary: 202, 73%, 28%;
+	--c: cubic-bezier(1,.49,.16,.96);
+}
+
+body {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	        align-items: center;
+	width: 100%;
+	height: 100vh;
+	font-family: 'Poppins', 'Helvetica', sans-serif;
+	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);	
+}
+
+.btn {
+	--w: 800px;
+	--h: 100px;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	width: var(--w);
+	height: var(--h);
+	border: 1px solid hsl(var(--primary));
+}
+
+div {margin-bottom: 20px;}
+div:last-child {margin-bottom: 0px;}
+
+i {
+	content: '';
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all .5s var(--c);
+	transition: all .5s var(--c);
+	background: hsl(var(--primary));
+}
+
+i:nth-child(1) {-webkit-transition-delay: .02s;transition-delay: .02s;}
+i:nth-child(2) {-webkit-transition-delay: .04s;transition-delay: .04s;}
+i:nth-child(3) {-webkit-transition-delay: .06s;transition-delay: .06s;}
+i:nth-child(4) {-webkit-transition-delay: .08s;transition-delay: .08s;}
+i:nth-child(5) {-webkit-transition-delay: .10s;transition-delay: .10s;}
+i:nth-child(6) {-webkit-transition-delay: .12s;transition-delay: .12s;}
+i:nth-child(7) {-webkit-transition-delay: .14s;transition-delay: .14s;}
+i:nth-child(8) {-webkit-transition-delay: .16s;transition-delay: .16s;}
+i:nth-child(9) {-webkit-transition-delay: .18s;transition-delay: .18s;}
+i:nth-child(10) {-webkit-transition-delay: .2s;transition-delay: .2s;}
+
+
+span {
+	position: absolute;
+	width: 100%;	
+	font-size: 14px;
+	font-weight: 800;
+	line-height: var(--h);
+	letter-spacing: 4px;
+	text-align: center;
+	text-transform: uppercase;
+	color: hsl(var(--primary));	
+	-webkit-transition: all .4s var(--c);	
+	transition: all .4s var(--c);
+	z-index: 100;
+}
+
+.style-1, 
+.style-2 {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+
+.style-1 i {-webkit-transform-origin: center left;transform-origin: center left;}
+
+.style-2 i{-webkit-transform-origin: center right;transform-origin: center right;}
+
+
+.style-1 i,
+.style-2 i {	
+	-webkit-transform: scaleX(0);	
+	        transform: scaleX(0);
+}
+
+
+
+.style-1:hover i,
+.style-2:hover i {
+	-webkit-transform: scaleX(1);
+	        transform: scaleX(1);
+}
+
+
+
+.btn:hover span {
+	color: hsl(var(--secondary));
+	-webkit-transition-delay: .4s;
+	        transition-delay: .4s;
+}
