@@ -17,9 +17,10 @@ If you change the "<" sign in code "FROM Return_table WHERE return_date<adddate(
 
 3. Sign in & Sign up
 I set up some accounts for testing:
-User type		Student	Student	Teacher	Teacher
-User id:		1	2	7	10
-Password:	1	2	7	10
+User 1:	Student	User id:1	Password:1
+User 2:	Student	User id:2	Password:2
+User 3:	Teacher	User id:7	Password:7
+User 4:	Student	User id:10	Password:10
 
 the id column in mysql is a integer from 1 to 10
 The data in Report page are based on these user's behaviour
